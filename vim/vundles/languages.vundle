@@ -1,8 +1,42 @@
-Bundle 'sheerun/vim-polyglot'
-Bundle 'garbas/vim-snipmate.git'
-Bundle 'honza/vim-snippets'
-Bundle 'jtratner/vim-flavored-markdown.git'
-Bundle 'scrooloose/syntastic.git'
+function! BuildYCM(info)
+  " info is a dictionary with 3 fields
+  " - name:   name of the plugin
+  " - status: 'installed', 'updated', or 'unchanged'
+  " - force:  set on PlugInstall! or PlugUpdate!
+ if a:info.status == 'installed' || a:info.force
+   !./install.py
+  endif
+endfunction
+Bundle 'briancollins/vim-jst'
+Bundle 'pangloss/vim-javascript'
+" Bundle 'rodjek/vim-puppet'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'claco/jasmine.vim'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'groenewege/vim-less'
+Bundle 'itspriddle/vim-jquery'
+Bundle 'jtratner/vim-flavored-markdown'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'scrooloose/syntastic'
 Bundle 'nelstrom/vim-markdown-preview'
 Bundle 'skwp/vim-html-escape'
+Bundle 'tpope/vim-haml'
+" Bundle 'Shougo/neosnippet'
+" Bundle 'Shougo/neosnippet-snippets'
+" Bundle 'Shougo/neocomplete'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
+Bundle 'Valloric/YouCompleteMe' , { 'do': function('BuildYCM') }
+" Bundle 'vim-scripts/AutoComplPop'
+Bundle 'mattn/emmet-vim'
+Bundle 'evidens/vim-twig'
 Bundle 'mxw/vim-jsx'
+
+" Bundle 'sheerun/vim-polyglot'
+" Bundle 'garbas/vim-snipmate.git'
+" Bundle 'honza/vim-snippets'
+" Bundle 'jtratner/vim-flavored-markdown.git'
+" Bundle 'scrooloose/syntastic.git'
+" Bundle 'nelstrom/vim-markdown-preview'
+" Bundle 'skwp/vim-html-escape'
+" Bundle 'mxw/vim-jsx'
