@@ -26,7 +26,7 @@ Bundle 'tpope/vim-haml'
 " Bundle 'Shougo/neocomplete'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
-Bundle 'Valloric/YouCompleteMe' , { 'do': function('BuildYCM') }
+" Bundle 'Valloric/YouCompleteMe' , { 'do': function('BuildYCM') }
 " Bundle 'vim-scripts/AutoComplPop'
 Bundle 'mattn/emmet-vim'
 Bundle 'evidens/vim-twig'
